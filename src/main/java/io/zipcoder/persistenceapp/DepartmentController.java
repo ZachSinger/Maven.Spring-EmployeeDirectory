@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/API/employee-controller")
-public class EmployeeController {
+@RequestMapping(value = "/API/department-controller")
+public class DepartmentController {
 
     @Autowired
-    private EmployeeService service;
+    private DepartmentService service;
 
     @PostMapping(value = "/create")
-    public ResponseEntity<Employee> create(@RequestBody Employee employee){
-        return new ResponseEntity<>(service.create(employee), HttpStatus.CREATED);
+    public ResponseEntity<Department> create(@RequestBody Department department){
+        return new ResponseEntity<>(service.create(department), HttpStatus.CREATED);
     }
 }
