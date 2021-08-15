@@ -15,12 +15,12 @@ public class Employee {
     private Date hireDate;
     @OneToOne
     private Employee manager;
-    private Long departmentNumber;
+
 
     public Employee() {
     }
 
-    public Employee(Long id, String firstName, String lastName, String title, String phoneNumber, String email, Date hireDate, Employee manager, Long departmentNumber) {
+    public Employee(Long id, String firstName, String lastName, String title, String phoneNumber, String email, Date hireDate, Employee manager) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,7 +29,7 @@ public class Employee {
         this.email = email;
         this.hireDate = hireDate;
         this.manager = manager;
-        this.departmentNumber = departmentNumber;
+        //this.departmentNumber = departmentNumber;
     }
 
     public Long getId() {
@@ -96,11 +96,11 @@ public class Employee {
         this.manager = manager;
     }
 
-    public Long getDepartmentNumber() {
-        return departmentNumber;
-    }
-
-    public void setDepartmentNumber(Long departmentNumber) {
-        this.departmentNumber = departmentNumber;
-    }
+//    public Long getDepartmentNumber() {
+//        return departmentNumber;
+//    }
+//
+//    public void setDepartmentNumber(Long departmentNumber) {
+//        this.departmentNumber = departmentNumber;
+//    }
 }
