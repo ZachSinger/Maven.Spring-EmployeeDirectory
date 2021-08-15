@@ -19,7 +19,7 @@ public class EmployeeController {
         return new ResponseEntity<>(service.create(employee), HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/read{id}")
+    @GetMapping(value = "/read/{id}")
     public ResponseEntity<Employee> read(@PathVariable Long id){
         return new ResponseEntity<>(service.read(id), HttpStatus.OK);
     }
@@ -27,7 +27,7 @@ public class EmployeeController {
     @GetMapping(value = "/read")
     public ResponseEntity<List<Employee>> readAll() { return new ResponseEntity<>(service.readAll(), HttpStatus.OK); }
 
-    @PutMapping(value = "/update{id}")
+    @PutMapping(value = "/update/{id}")
     public ResponseEntity<Employee> update(@PathVariable Long id, @RequestBody Employee newEmployeeData){
         return new ResponseEntity<>(service.update(id, newEmployeeData), HttpStatus.OK);
     }
